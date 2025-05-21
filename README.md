@@ -1,5 +1,3 @@
-<img src="https://i.imgur.com/JD4TDlS.png" alt="AESCORPcam Logo" width="300"/>
-
 # 📹 AESCORPcam
 
 > Ferramenta de captura automática de vídeo para verificação de identidade
