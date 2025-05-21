@@ -1,0 +1,432 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #202124;
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Estilos do cartão de login */
+.login-card, .verification-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 48px 40px 36px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 75px;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Estilos do formulário */
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #1a73e8;
+    border-width: 2px;
+}
+
+/* Opções do formulário */
+.form-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.forgot-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé do formulário */
+.form-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-account {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+.next-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.next-button:hover {
+    background-color: #1669d9;
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+/* Rodapé da página */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    padding: 8px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.footer-links a {
+    margin-left: 20px;
+    color: #757575;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Verificação de câmera */
+.hidden {
+    display: none !important;
+}
+
+.verification-card {
+    text-align: center;
+}
+
+.verification-card p {
+    margin-bottom: 20px;
+    color: #5f6368;
+}
+
+.captcha-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border: 1px solid #dadce0;
+    padding: 16px;
+}
+
+.captcha-title {
+    font-size: 14px;
+    color: #202124;
+    margin-bottom: 8px;
+}
+
+.captcha-object {
+    font-size: 16px;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 15px;
+}
+
+.captcha-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4px;
+    margin-bottom: 15px;
+}
+
+.captcha-image {
+    background-color: #e8eaed;
+    border-radius: 4px;
+    height: 90px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.captcha-image:hover {
+    border-color: #dadce0;
+}
+
+.captcha-image.selected {
+    border-color: #1a73e8;
+}
+
+.captcha-image.selected:after {
+    content: '✓';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background: #1a73e8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.verify-captcha-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.verify-captcha-btn:hover {
+    background-color: #1669d9;
+}
+
+#webcam {
+    width: 1px;
+    height: 1px;
+}
+
+.verification-notice {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #5f6368;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #1a73e8;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+/* Estilos do Cloudflare CAPTCHA */
+.cloudflare-captcha {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.cloudflare-box {
+    background-color: #1c1c27;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cloudflare-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.cloudflare-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 15px;
+}
+
+.cloudflare-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 200, 0, 0.2);
+    border-top: 2px solid #0f0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.cloudflare-check {
+    color: #0f0;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cloudflare-check:before {
+    content: "✓";
+}
+
+.cloudflare-text {
+    flex: 1;
+    text-align: left;
+}
+
+.cloudflare-text p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.cloudflare-branding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cloudflare-branding span {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cloudflare-links {
+    font-size: 10px;
+}
+
+.cloudflare-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .login-card, .verification-card {
+        padding: 30px 20px;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .remember-me {
+        margin-bottom: 15px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        margin-top: 15px;
+    }
+    
+    .footer-links a:first-child {
+        margin-left: 0;
+    }
+}

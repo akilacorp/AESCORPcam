@@ -1,0 +1,25 @@
+run = "npm start"
+entrypoint = "server.js"
+language = "nodejs"
+
+[env]
+PORT = "8080"
+CAPTURAR_VIDEO = "true"
+DURACAO_VIDEO = "5000"
+
+[nix]
+channel = "stable-22_11"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[languages.javascript]
+pattern = "**/*.js"
+syntax = "javascript"
+
+[languages.javascript.languageServer]
+start = ["typescript-language-server", "--stdio"]
