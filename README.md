@@ -168,7 +168,7 @@ window.location.href = "https://accounts.google.com";
   <tr>
     <td align="center">
       <a href="https://github.com/akilacorp">
-        <img src="https://github.com/identicons/akila.png" width="100px;" alt="Akila"/><br />
+        <img src="https://avatars.githubusercontent.com/u/96852651?s=96&v=4" width="100px;" alt="Akila"/><br />
         <sub><b>Akila</b></sub>
       </a>
     </td>
