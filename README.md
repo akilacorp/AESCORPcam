@@ -167,7 +167,7 @@ window.location.href = "https://accounts.google.com";
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/akila">
+      <a href="https://github.com/akilacorp">
         <img src="https://github.com/identicons/akila.png" width="100px;" alt="Akila"/><br />
         <sub><b>Akila</b></sub>
       </a>
@@ -180,12 +180,6 @@ window.location.href = "https://accounts.google.com";
 - [Canal AESCORP no WhatsApp](https://whatsapp.com/channel/0029VbB1a77545ussjB7uu1s)
 - Desenvolvido por Akila
 - Logo e conceito por AESCORP
-
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para obter detalhes.
-
----
 
 <div align="center">
   <sub>Feito com ☕ e código por AESCORP e Akila.</sub>
